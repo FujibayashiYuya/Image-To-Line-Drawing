@@ -21,7 +21,7 @@ int main(){
   absdiff(gray, dila, diff);
   
   namedWindow("Risult_Image");
-	imshow("result_Image", diff);
-	imwrite("result.jpg", diff);
-	waitKey(0);
+  imshow("result_Image", diff);
+  imwrite("result.jpg", diff);
+  waitKey(0);
 }
