@@ -19,7 +19,7 @@ int main(){
   //黒い箇所を狭める
   dilate(gray, dila, Mat(), Point(-1, -1), 1);
   absdiff(gray, dila, diff);
-  threshold(diff, edge, 50, 255, THRESH_BINARY);
+  bitwise_not(diff, edge);
   
   //画像を表示・保存
   namedWindow("Risult_Image");
