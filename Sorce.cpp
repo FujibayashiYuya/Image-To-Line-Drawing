@@ -19,9 +19,11 @@ int main(){
   //黒い箇所を狭める
   dilate(gray, dila, Mat(), Point(-1, -1), 1);
   absdiff(gray, dila, diff);
+  threshold(diff, edge, 50, 255, THRESH_BINARY);
+  
   //画像を表示・保存
   namedWindow("Risult_Image");
-  imshow("result_Image", diff);
-  imwrite("result.jpg", diff);
+  imshow("result_Image", edge);
+  imwrite("result.jpg", edge);
   waitKey(0);
 }
