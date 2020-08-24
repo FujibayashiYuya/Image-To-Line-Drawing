@@ -7,7 +7,7 @@ using namespace cv;
 using namespace std;
 
 int main(){
-  Mat img, gray, dila, diff;
+  Mat img, gray, dila, diff, edge;
   //画像読み込み + 例外処理
   img = imread("images/src.jpg");
   if(img.empty() == true){
